@@ -1,0 +1,37 @@
+{
+  "name": "dokkuapp-backend",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "author": "ItzNeviKat",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node .",
+    "build": "tsc -p ./tsconfig.json",
+    "start": "node ./build/index"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.1",
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa__cors": "^3.0.2",
+    "@types/koa__router": "^8.0.4",
+    "@types/node": "^14.14.37",
+    "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^10.0.0",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-logger": "^3.2.1",
+    "uuid": "^8.3.2",
+    "vk-io": "^4.1.4"
+  }
+}
