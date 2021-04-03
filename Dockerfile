@@ -9,6 +9,6 @@ COPY . ./
 RUN npm install
 RUN npm run build
 
-EXPOSE 3020
+EXPOSE 3030
 
 CMD [ "node", "build/index.js" ]
