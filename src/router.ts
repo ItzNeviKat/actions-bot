@@ -27,7 +27,7 @@ router.post('/payload', async (context: RouterContext) => {
       📖 Репозиторий ${body.repository.name}
 
       🎬 Запущен Github Action с именем ${body.check_run.name} (id:${body.check_run.id})
-      📎 Ссылка - ${body.check_run.url}
+      📎 Ссылка - ${body.check_run.details_url}
     `);
   } else if (body.action === 'completed') {
     if (body.check_run.conclusion === 'success') {
@@ -42,7 +42,7 @@ router.post('/payload', async (context: RouterContext) => {
           new Date(body.check_run.started_at).getTime()) /
           1000
       )} секунд
-      📎 Ссылка - ${body.check_run.url}
+      📎 Ссылка - ${body.check_run.details_url}
     `);
     } else {
       await sendMessage(`
@@ -56,7 +56,7 @@ router.post('/payload', async (context: RouterContext) => {
           new Date(body.check_run.started_at).getTime()) /
           1000
       )} секунд
-      📎 Ссылка - ${body.check_run.url}
+      📎 Ссылка - ${body.check_run.details_url}
 
       @all
     `);
