@@ -16,6 +16,7 @@
       "koa__cors",
       "koa__router",
       "koa-logger",
+      "common-tags"
     ],
     "esModuleInterop": true,
     "skipLibCheck": true,
