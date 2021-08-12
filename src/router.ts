@@ -13,7 +13,7 @@ router.post('/payload', async (context: RouterContext) => {
   const resultSignature: string =
     'sha256=' +
     crypto
-      .createHmac('sha256', 'VzHcuV9L-4i6xYe')
+      .createHmac('sha256', process.env.GITHUB_SECRET)
       .update(JSON.stringify(context.request.body))
       .digest('hex');
 
